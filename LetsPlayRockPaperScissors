@@ -1,0 +1,74 @@
+import java.util.*;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("WELCOME TO THE ROCK PAPER AND SCISSORS GAME !!!");
+      Random random = new Random();
+      Scanner sc = new Scanner(System.in);
+      int Choice = random.nextInt(3);
+      int c = 2 ;
+        
+      do{
+        while(c>=0){
+          if(c==0){
+            System.out.println("No chances left");
+            break;
+          }
+        System.out.println("Choose :\n 1. Scissors \n 2. Rock \n 3. Paper");
+        System.out.println("WARNING !! YOU ONLY HAVE "+c+" CHANCES , BEST OF LUCK ");
+      int user = sc.nextInt();
+      if(Choice == 0){
+        if(user == 2 ){
+          System.out.println("YOU WON!!");
+          System.out.println("Computer choose : Scissors");
+          break;
+        }else if(user == 1){
+          System.out.println("Its a Draw");
+          System.out.println("Computer choose : Scissors");
+          c--;
+          System.out.println("Chances left = "+c);
+        }else {
+          System.out.println("You Lose , Kismat kharab h teri !! ");
+          System.out.println("Computer choose : Scissors");
+          c--;
+          System.out.println("Chances left = "+c);
+        }
+      }else if(Choice == 1){
+        if(user == 3){
+          System.out.println("YOU WON!!");
+          System.out.println("Computer choose : Rock");
+          break;
+        }else if(user == 2){
+          System.out.println("Its a Draw");
+          System.out.println("Computer choose : Rock");
+          c--;
+          System.out.println("Chances left = "+c);
+        }else{
+          System.out.println("You Lose , Kismat kharab h teri !! ");
+          System.out.println("Computer choose : Rock");
+          c--;
+          System.out.println("Chances left = "+c);
+        }
+      }else{
+        if(user == 1){
+          System.out.println("YOU WON!!");
+          System.out.println("Computer choose : Paper");
+          break;
+        }else if(user == 3){
+          System.out.println("Its a Draw");
+          System.out.println("Computer choose : Paper");
+          c--;
+          System.out.println("Chances left = "+c);
+        }else {
+          System.out.println("You Lose , Kismat kharab h teri !! ");
+          System.out.println("Computer choose : Paper");
+          c--;
+          System.out.println("Chances left = "+c);
+        }
+      }
+      }
+      break;
+      }while(true);
+      }
+}
